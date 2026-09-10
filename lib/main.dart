@@ -98,7 +98,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 Icon(Icons.email),
                 SizedBox(width: 10),
                 Text(
-                  'diluka.w@nsbm.ac.lk',
+                  'theekshanathushan89@gmail.com',
                   style: TextStyle(fontSize: 16),
                 ),
               ],
