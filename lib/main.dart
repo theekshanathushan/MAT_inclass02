@@ -28,8 +28,6 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
-  // Step 1: Basic structure setup. Variables and other UI elements will be added in next steps.
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,8 +39,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text('Profile details will go here...'),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 20),
+            // Profile Image (CircleAvatar)
+            const Center(
+              child: CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.person,
+                  size: 80,
+                  color: Colors.grey,
+                ),
+              ),
+            ),
+            const SizedBox(height: 30),
+            // Divider line
+            const Divider(
+              color: Colors.black,
+              thickness: 1,
+            ),
+            const SizedBox(height: 20),
+            // Step 3 will be placed here
+          ],
+        ),
       ),
     );
   }
