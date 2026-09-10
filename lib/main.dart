@@ -82,7 +82,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 5),
             const Text(
-              'Diluka',
+              'theekshana thushan',
               style: TextStyle(fontSize: 16),
             ),
             const SizedBox(height: 20),
