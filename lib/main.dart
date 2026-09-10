@@ -28,6 +28,9 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+  // Step 3: Variables
+  int _points = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +67,55 @@ class _ProfileScreenState extends State<ProfileScreen> {
               thickness: 1,
             ),
             const SizedBox(height: 20),
-            // Step 3 will be placed here
+            
+            // Name section
+            const Text(
+              'Name',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            const SizedBox(height: 5),
+            const Text(
+              'Diluka',
+              style: TextStyle(fontSize: 16),
+            ),
+            const SizedBox(height: 20),
+
+            // Email section
+            const Text(
+              'Email',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            const SizedBox(height: 5),
+            Row(
+              children: const [
+                Icon(Icons.email),
+                SizedBox(width: 10),
+                Text(
+                  'diluka.w@nsbm.ac.lk',
+                  style: TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+            const SizedBox(height: 20),
+
+            // Points section
+            const Text(
+              'Points',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+            const SizedBox(height: 5),
+            Row(
+              children: [
+                const Icon(Icons.star),
+                const SizedBox(width: 10),
+                Text(
+                  '$_points',
+                  style: const TextStyle(fontSize: 16),
+                ),
+              ],
+            ),
+            
+            // Step 4 will be placed here (FloatingActionButton for incrementing points)
           ],
         ),
       ),
