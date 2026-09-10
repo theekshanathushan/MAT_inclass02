@@ -31,6 +31,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   // Step 3: Variables
   int _points = 0;
 
+  // Step 4: Method to increment points
+  void _incrementPoints() {
+    setState(() {
+      _points++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -114,10 +121,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ],
             ),
-            
-            // Step 4 will be placed here (FloatingActionButton for incrementing points)
           ],
         ),
+      ),
+      // Step 4: Floating Action Button
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementPoints,
+        backgroundColor: Colors.black,
+        child: const Icon(Icons.add, color: Colors.white),
       ),
     );
   }
